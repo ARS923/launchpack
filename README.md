@@ -28,7 +28,7 @@ A collection of 10 expert AI assistants (Gems) you create in Google Gemini to gu
 
 ## Demo App
 
-I built [Your App Name] using Google AI Studio to demonstrate the flow.
+I built Banana Boat using Google AI Studio to demonstrate the flow.
 
 [Link to live app]
 [Link to demo video]
