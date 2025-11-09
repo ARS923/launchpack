@@ -31,7 +31,7 @@ function App() {
             <a href="#try-it" className="cta-primary">
               Try It Live →
             </a>
-            <a href="https://github.com/yourusername/launchpack" className="cta-secondary" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/ARS923/launchpack" className="cta-secondary" target="_blank" rel="noopener noreferrer">
               View on GitHub
             </a>
           </div>
@@ -186,7 +186,7 @@ function App() {
           </div>
           
           <div className="footer-links">
-            <a href="https://github.com/yourusername/launchpack" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/ARS923/launchpack" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="#try-it">Try It Live</a>
             <a href="https://labs.google.com/pomelli" target="_blank" rel="noopener noreferrer">Pomelli</a>
           </div>
