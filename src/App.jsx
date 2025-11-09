@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import GemCustomizer from './components/GemCustomizer';
+import GemCard from './components/GemCard';
+import { gems } from './data/gems';
 import './App.css';
 
 function App() {
@@ -138,6 +140,20 @@ function App() {
       {/* Interactive Customizer */}
       <section id="try-it" className="customizer-section">
         <GemCustomizer />
+      </section>
+
+      {/* All 10 Gems */}
+      <section className="gems-section">
+        <h2 className="section-title">The 10 Launch Gems</h2>
+        <p className="section-subtitle">
+          Expert AI assistants for every stage of your launch journey
+        </p>
+
+        <div className="gems-grid">
+          {gems.map((gem) => (
+            <GemCard key={gem.id} gem={gem} />
+          ))}
+        </div>
       </section>
 
       {/* Testimonials */}

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { generateCustomGem } from '../utils/gemini';
 import './GemCustomizer.css';
 
 const GEM_TEMPLATES = {
@@ -83,8 +82,30 @@ export default function GemCustomizer() {
 
     try {
       const template = GEM_TEMPLATES[selectedGem];
-      const result = await generateCustomGem(template.template, appDescription);
-      setCustomizedGem(result);
+
+      // Call the serverless API endpoint instead of client-side API
+      const response = await fetch('/api/generate-gem', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          template: template.template,
+          userApp: appDescription
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`API request failed: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data.error) {
+        throw new Error(data.error);
+      }
+
+      setCustomizedGem(data.gem);
     } catch (err) {
       setError('Failed to generate. Please try again.');
       console.error(err);

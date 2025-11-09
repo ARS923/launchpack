@@ -6,7 +6,7 @@
 
 1. Create a `.env` file in the `launchpack` directory:
 ```bash
-GOOGLE_AI_API_KEY=your_api_key_here
+GEMINI_API_KEY=your_api_key_here
 ```
 
 2. Get your API key from: https://aistudio.google.com/app/apikey
@@ -43,7 +43,8 @@ npm run dev
 
 ## Troubleshooting
 
-- **"API key not configured"**: Make sure `GOOGLE_AI_API_KEY` is set in Vercel environment variables
+- **"API key not configured"**: Make sure `GEMINI_API_KEY` is set in Vercel environment variables
 - **CORS errors**: The API route includes CORS headers
 - **Rate limits**: Google AI API has rate limits - check your quota
+- **"Failed to generate"**: Check that your API key is valid and has access to the Gemini API
 
