@@ -693,6 +693,30 @@ body {
   text-decoration: underline;
 }
 
+/* Gems Section */
+.gems-section {
+  padding: 5rem 2rem;
+  background: #0f1419;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .gem-customizer {
@@ -704,5 +728,15 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+
+  .gems-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .gems-section {
+    padding: 3rem 1rem;
   }
 }
